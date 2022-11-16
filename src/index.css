@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .card {
+      background-color: theme('colors.white');
+      border-radius: theme('borderRadius.lg');
+      padding: theme('spacing.3');
+      box-shadow: theme('boxShadow.xl');
+    }
+    /* ... */
+  }
+
+
+  .drawer-animation{
+    animation: drawer ease-in-out .3s 1;
+    width: 33.333333%;
+  }
+.close-animation{
+  animation: close-drawer ease-in-out .3s 1;
+  width: 0;
+}
+  @keyframes drawer {
+    0%{
+      width: 0;
+    }
+    100%{
+      width: 33.333333%;
+    }
+  }
+  
+  @keyframes close-drawer {
+    0%{
+      width: 33.333333%;
+    }
+    100%{
+      width: 0;
+    }
+  }
